@@ -4,6 +4,14 @@ module.exports = function (grunt) {
     grunt.initConfig({
       pkg: grunt.file.readJSON('./package.json'),
 
+      copy: {
+        main: {
+          nonull: true,
+          src: '_assets',
+          dest: '_site',
+        },
+      },
+
       shell : {
         jekyllServe : {
           command : 'jekyll serve'
@@ -26,8 +34,9 @@ module.exports = function (grunt) {
       }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-shell');
 
     // register custom grunt tasks
-    grunt.registerTask( 'default', ['shell:jekyllServe'] )
+    grunt.registerTask( 'default', ['copy', 'shell:jekyllServe'] )
 };
