@@ -1,52 +1,54 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+// Make sure the charset is set appropriately
 @charset "utf-8";
 
-
-
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
-
+// Foundation by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+@import "settings";
+
+// Behold, here are all the Foundation components.
+  @import "foundation/components/grid";
+  // @import "foundation/components/accordion";
+  @import "foundation/components/alert-boxes";
+  @import "foundation/components/block-grid";
+  // @import "foundation/components/breadcrumbs";
+  @import "foundation/components/button-groups";
+  @import "foundation/components/buttons";
+  @import "foundation/components/clearing";
+  @import "foundation/components/dropdown";
+  // @import "foundation/components/dropdown-buttons";
+  // @import "foundation/components/flex-video";
+  @import "foundation/components/forms";
+  @import "foundation/components/icon-bar";
+  @import "foundation/components/inline-lists";
+  // @import "foundation/components/joyride";
+  @import "foundation/components/keystrokes";
+  @import "foundation/components/labels";
+  // @import "foundation/components/magellan";
+  // @import "foundation/components/orbit";
+  @import "foundation/components/pagination";
+  @import "foundation/components/panels";
+  // @import "foundation/components/pricing-tables";
+  // @import "foundation/components/progress-bars";
+  @import "foundation/components/range-slider";
+  @import "foundation/components/reveal";
+  @import "foundation/components/side-nav";
+  @import "foundation/components/split-buttons";
+  @import "foundation/components/sub-nav";
+  @import "foundation/components/switches";
+  @import "foundation/components/tables";
+  @import "foundation/components/tabs";
+  @import "foundation/components/thumbs";
+  @import "foundation/components/tooltips";
+  // @import "foundation/components/top-bar";
+  @import "foundation/components/type";
+  @import "foundation/components/offcanvas";
+  @import "foundation/components/visibility";
+
+  // Additional custom stylesheets
+  @import "style";

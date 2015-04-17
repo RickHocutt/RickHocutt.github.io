@@ -5,10 +5,22 @@ module.exports = function (grunt) {
       pkg: grunt.file.readJSON('./package.json'),
 
       copy: {
-        main: {
-          nonull: true,
-          src: '_assets',
-          dest: '_site',
+        css: {
+          files: [
+            {expand: true, flatten: true, src: ['bower_components/foundation/scss/normalize.scss'], dest: '_sass', filter: 'isFile'},
+            {expand: true, cwd: 'bower_components/foundation/scss/foundation/', src: ['**'], dest: '_sass/foundation'},
+          ],
+        },
+        js: {
+          files: [
+            {
+              expand: true,
+              flatten: true,
+              src: ['bower_components/jquery/dist/jquery.min.js', 'bower_components/modernizr/modernizr.js', 'bower_components/foundation/js/foundation.min.js'],
+              dest: 'js',
+              filter: 'isFile'
+            },
+          ],
         },
       },
 
@@ -24,7 +36,7 @@ module.exports = function (grunt) {
                   'css/*.css',
                   '_config.yml',
                   'index.html' ],
-        tasks : [ 'shell:jekyllServe' ],
+        tasks : [ 'copy', 'shell:jekyllServe' ],
         options : {
           spawn : false,
           interrupt : true,
