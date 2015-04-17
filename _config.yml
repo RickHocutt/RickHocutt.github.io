@@ -9,6 +9,7 @@ github_username:  RickHocutt
 
 # Build settings
 markdown: kramdown
+highlighter: pygments
 
 exclude:
   - bower_components
