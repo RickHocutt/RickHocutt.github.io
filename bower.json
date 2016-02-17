@@ -1,0 +1,23 @@
+{
+  "name": "Rick Hocutt - Jekyll Site",
+  "homepage": "http://rickhocutt.com/",
+  "authors": [
+    "Rick Hocutt"
+  ],
+  "description": "Personal Web Portfolio.",
+  "keywords": [
+    "Jekyll",
+    "foundation"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "6.1.2"
+  }
+}

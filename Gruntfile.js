@@ -45,9 +45,9 @@ module.exports = function (grunt) {
       watch : {
         files : [ '_layouts/*.html',
                   '_posts/*.markdown',
-                  'css/*.css',
-                  '_config.yml',
-                  'index.html' ],
+                  'sass/*.scss',
+                  '_config.sassyml',
+                  '*.html' ],
         tasks : [ 'copy', 'shell:jekyllServe' ],
         options : {
           spawn : false,

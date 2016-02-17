@@ -4,59 +4,60 @@ bodyId: homepage
 ---
 
 <section class="main pages content" id="home">
-  <div class="row">
-    <h1>Web Developer and UI Designer</h1>
-  </div>
+  <img src="img/rh-main.jpg" />
+  <h1>User Experience / User Interface Designer</h1>
 </section>
 
-<section class="portfolio section content" id="portfolio">
-  <div class="container">
-    <div class="row">
-      <div class="small-12 columns">
-          <h2>Portfolio</h2>
-      </div>
-
-      {% for post in site.portfolio %}
-        <div class="small-12 medium-6 large-4 columns thumb">
-            <div class="card center-block">
-                <div class="front face"><img alt="..." src="{{ site.baseurl }}/img/portfolio/thumbs/{{ post.thumb }}"></div>
-                <div class="back face center">
-                    <h3>{{ post.title }}</h3>
-                    <p><a class="button radius" href="{{ post.url | prepend: site.baseurl }}">View</a></p>
-                </div>
-            </div>
-        </div>
-      {% endfor %}
-
-      {% if dontShowThisYet %}
-      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-      {% endif %}
-
-    </div>
-  </div>
-</section>
-
-<section class="about section content" id="contact">
+<section class="about section content" id="about">
   <div class="container row">
-    <div class="small-12 large-6 columns">
+    <div class="large-12 columns">
       <h2 class="articleTitle">About Me</h2>
       <p>I am a Front End Web Developer with sixteen years of graphic design experience and six years of experience building websites that conform to
-      current web standards. I hand code valid <span class="has-tip radius" data-tooltip="" title="More Than Just a Few New Fancy Tags">HTML 5</span>,
-      <span class="has-tip radius" data-tooltip="" title="Modern CSS That Rocks!">CSS 3</span>, and
-      <span class="has-tip radius" data-tooltip="" title="Making things happen :)">JavaScript</span>.</p>
+        current web standards. I hand code valid <span class="has-tip radius" data-tooltip="" title="More Than Just a Few New Fancy Tags">HTML 5</span>,
+        <span class="has-tip radius" data-tooltip="" title="Modern CSS That Rocks!">CSS 3</span>, and
+        <span class="has-tip radius" data-tooltip="" title="Making things happen :)">JavaScript</span>.</p>
 
-      <p>My recent duties as a Front End Web Developer for AutoZone include developing for their primary public facing websites,
-      <a href="http://www.autozone.com">AutoZone.com</a> and <a href="http://www.autozonepro.com">AutoZonePro.com</a>. On my own time I enjoy building sites
-      using Drupal, Wordpress, Jekyll, Grunt and a slew of other Front-End tools.</p>
+        <p>I have worked as a Designer and Front End Web Developer for LEGOLAND, AutoZone, Cardinal Health and Aon.
+          My duties have included developing user flows and application interfaces for <a href="http://www.autozone.com">AutoZone.com</a>, <a href="http://www.autozone.com.br">AutoZone.com.br</a>, <a href="http://www.aon.com/upoint">UPoint</a> .
+          On my own time I enjoy building sites using Drupal, Wordpress, Jekyll, Grunt and a slew of other Front-End tools.</p>
+          <p class="centered"><a class="button radius" href="resume.html">View My Resume</a></p>
+        </div>
+      </div>
+    </section>
 
-      <p class="centered"><a class="button radius" href="resume.php">View My Resume</a></p>
-    </div>
+    <section class="portfolio section content" id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="small-12 columns">
+            <h2>Portfolio</h2>
+          </div>
+          
+          {% for post in site.portfolio %}
+          <div class="small-12 medium-6 large-4 columns thumb">
+            <div class="card center-block">
+              <div class="front face"><img alt="..." src="{{ site.baseurl }}/img/portfolio/thumbs/{{ post.thumb }}"></div>
+              <div class="back face center">
+                <h3>{{ post.title }}</h3>
+                <p><a class="button radius" href="{{ post.url | prepend: site.baseurl }}">View</a></p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
 
-    <div class="small-12 large-6 columns" id="contact-form">
-      <h2 class="articleTitle textShadow">Contact me</h2>
-      {% include contact-form.html %}
+          {% if dontShowThisYet %}
+          <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+          {% endif %}
+        </div>
+      </div>
+    </section>
 
-    </div>
-  </div>
-</section>
-<div class="reveal-modal xlarge" data-reveal="" id="modal-1"></div>
+    <section class="section content" id="contact">
+      <div class="container row">
+        <div class="large-12 columns" id="contact-form">
+          <h2 class="articleTitle textShadow">Contact me</h2>
+          {% include contact-form.html %}
+
+        </div>
+      </div>
+    </section>
+    <div class="reveal-modal xlarge" data-reveal="" id="modal-1"></div>

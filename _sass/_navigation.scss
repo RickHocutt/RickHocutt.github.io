@@ -1,0 +1,16 @@
+#primary-nav {
+  font-size: 1em;
+    a {
+      color: #777;
+
+      &:hover {color:#4a4adf;}
+    }
+}
+
+@media #{$large} {
+
+  #primary-nav {
+    margin-top: 1em;
+    font-size: 1.2em;
+  }
+}

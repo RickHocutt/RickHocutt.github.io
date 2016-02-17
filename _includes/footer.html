@@ -3,21 +3,45 @@
 
     <div class="small-12 medium-8 columns">
       <p>© 2014 Rick Hocutt - All rights reserved</p>
-      <p><small>This site was built with <span data-tooltip class="has-tip tip-top radius" title="http://jekyllrb.com">Jekyll</span> and <span data-tooltip class="has-tip tip-top radius" title="http://foundation.zurb.com">Foundation</span> on <span data-tooltip class="has-tip tip-top radius" title="https://github.com/RickHocutt/RickHocutt.github.io">GitHub</span></small></p>
+      <p><small>This site was built with <span data-tooltip class="has-tip radius" title="http://jekyllrb.com">Jekyll</span> and <span data-tooltip class="has-tip tip-top radius" title="http://foundation.zurb.com">Foundation</span> on <span data-tooltip class="has-tip tip-top radius" title="https://github.com/RickHocutt/RickHocutt.github.io">GitHub</span></small></p>
     </div>
 
     <div class="small-12 medium-4 columns">
       <ul class="social-media inline-list centered">
+        <li>
+          <a href="http://www.linkedin.com/in/rickhocutt">
+            <svg class="icon icon-LinkedIn">
+              <use xlink:href="img/symbols-def.svg#icon-LinkedIn"></use>
+            </svg><span class="sr-only">Linked In</span>
+          </a>
+        </li>
 
-        <li><a href="http://www.linkedin.com/in/rickhocutt"><svg class="icon icon-LinkedIn"><use xlink:href="#icon-LinkedIn"></use></svg><span class="sr-only">Linked In</span></a></li>
-
-        <li><a href="https://plus.google.com/u/0/110733864965904289217"><svg class="icon icon-Home"><use xlink:href="#icon-GooglePlus"></use></svg><span class="sr-only">Google Plus</span></a></li>
+        <li>
+          <a href="https://plus.google.com/u/0/110733864965904289217">
+            <svg class="icon icon-Home">
+              <use xlink:href="img/symbols-def.svg#icon-GooglePlus"></use>
+            </svg><span class="sr-only">Google Plus</span>
+          </a>
+        </li>
 
         {% if site.twitter_username %}
-        <li><a href="http://twitter.com/{{ site.twitter_username }}"><svg class="icon icon-Home"><use xlink:href="#icon-Twitter"></use></svg><span class="sr-only">Twitter</span></a></li>
+        <li>
+          <a href="http://twitter.com/{{ site.twitter_username }}">
+            <svg class="icon icon-Home">
+              <use xlink:href="img/symbols-def.svg#icon-Twitter"></use>
+            </svg><span class="sr-only">Twitter</span>
+          </a>
+        </li>
         {% endif %}
 
-        <li><a href="http://codepen.io/RickHocutt"><svg class="icon icon-Home"><use xlink:href="#icon-codepen"></use></svg><span class="sr-only">CodePen</span></a></li>
+        <li>
+          <a href="http://codepen.io/RickHocutt">
+            <svg class="icon icon-Home">
+              <use xlink:href="img/symbols-def.svg#icon-codepen"></use>
+            </svg>
+            <span class="sr-only">CodePen</span>
+          </a>
+        </li>
 
       </ul>
     </div>
@@ -26,18 +50,19 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="{{ "/js/jquery.min.js" | prepend: site.baseurl }}"><\/script>')</script>
 <script src="{{ "/js/foundation.min.js" | prepend: site.baseurl }}"></script>
+<script defer src="{{ "/js/svgxuse.min.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/general.js" | prepend: site.baseurl }}" type="text/javascript"></script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-687900-11', 'auto');
-  ga('send', 'pageview');
+ga('create', 'UA-687900-11', 'auto');
+ga('send', 'pageview');
 
 </script>
 
 <!--[if lt IE 9]>
-	<script src="https://github.com/chuckcarpenter/REM-unit-polyfill"></script>
+<script src="https://github.com/chuckcarpenter/REM-unit-polyfill"></script>
 <![endif]-->

@@ -1,0 +1,19 @@
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+
+
+.social-media {
+  font-size: 2em;
+
+   a {
+    color: #777;
+
+    &:hover {
+      color: $primary-color;
+    }
+   }
+}
