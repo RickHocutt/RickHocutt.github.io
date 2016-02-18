@@ -50,11 +50,11 @@ function sectionPadding(){
 		var headerHeight = $('#primary-header').outerHeight(),
 		    footerHeight = $('#primary-footer').outerHeight();
 
-		$('section:first-of-type').css('margin-top', headerHeight +"px");
-    $('section:last-of-type').css('margin-bottom', footerHeight +"px");
+		$('#home').css('margin-top', headerHeight +"px");
+    $('#contact').css('margin-bottom', footerHeight +"px");
 	} else {
-    $('section:first-of-type').css('margin-top', "0");
-    $('section:last-of-type').css('margin-bottom', "0");
+    $('#home').css('margin-top', "0");
+    $('#contact').css('margin-bottom', "0");
   }
 }
 
@@ -81,7 +81,6 @@ $(document).ready(function() {
       }
     });
   });
-
 
 
 	// Configs

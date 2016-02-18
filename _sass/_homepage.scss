@@ -1,0 +1,41 @@
+#homepage .main {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+
+  h1 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 0 #363636, 0 0 15px rgba(0,0,0,0.7);
+  }
+}
+
+.no-textshadow #homepage .main h1 { color: #000; }
+
+@media #{$large} {
+  .csstransitions #homepage #contact.section {
+    background-color: #eee;
+  }
+
+  .csstransitions #homepage #primary-footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    background: #fff;
+    width: 100%;
+  }
+}
+
+@media #{$small-only, $medium-only} {
+  #homepage .main {
+    h1 {
+      left: 5px;
+      top: 0;
+      bottom: 10px;
+      font-size: 18px;
+      font-size: 1.2rem;
+    }
+  }
+}

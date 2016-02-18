@@ -5,22 +5,22 @@
   border-bottom: 5px solid $primary-color;
 
   h1 a {
-      display: block;
-      text-indent: -9999px;
-      width: 250px;
-      height: 83px;
-      background: url(../img/rh-logo.svg);
-      background-size: 250px 83px;
-    }
+    display: block;
+    text-indent: -9999px;
+    width: 250px;
+    height: 83px;
+    background: url(../img/rh-logo.svg);
+    background-size: 250px 83px;
+  }
 
-    &.nav-up {
-      h1 a {
-        width: 125px;
-        height: 41px;
-        background-size: 125px 41px;
-        transition-duration: 1s;
-      }
+  &.nav-up {
+    h1 a {
+      width: 125px;
+      height: 41px;
+      background-size: 125px 41px;
+      transition-duration: 1s;
     }
+  }
 }
 
 .no-svg #primary-header h1 a {
@@ -31,5 +31,17 @@
   #homepage #primary-header {
     position: fixed;
     top: 0;
+  }
+}
+
+@media #{$small-only, $medium-only} {
+  #primary-header {
+    a {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .columns { padding-left: 10px;}
   }
 }
