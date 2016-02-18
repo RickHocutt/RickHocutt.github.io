@@ -27,9 +27,15 @@
 	  max-width: 400px;
 
 	  .effect {
-			-webkit-animation: gray 3s once;
-	    -moz-animation: gray 3s once;
-	    animation: gray 3s once;
+			-webkit-animation: gray 3s;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-fill-mode: forwards;
+	    -moz-animation: gray 3s;
+			-moz-animation-iteration-count: 1;
+			-moz-animation-fill-mode: forwards;
+	    animation: gray 3s;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
 	  }
 	}
 
