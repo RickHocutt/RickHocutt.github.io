@@ -74,14 +74,15 @@ $(document).ready(function() {
       e.preventDefault();
       $('html, body').animate({
         scrollTop: offset
-      }, 2000);
+      }, 1000);
+
+      if ($(this).hasClass("contactLink")){
+        $("form #your-name").focus();
+      }
     });
   });
 
-	// Focus on the form
-	$("a.contactLink").on("click", function() {
-	    $("form #your-name").focus();
-	});
+
 
 	// Configs
 	setUpPortfolio({
