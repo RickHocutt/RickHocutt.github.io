@@ -48,7 +48,7 @@ function setUpPortfolio (portfolioConfig) {
 function sectionPadding(){
 	if (Foundation.utils.is_large_up()) {
 		var headerHeight = $('#primary-header').outerHeight(),
-		footerHeight = $('#primary-footer').outerHeight();
+		    footerHeight = $('#primary-footer').outerHeight();
 
 		$('section:first-of-type').css('margin-top', headerHeight +"px");
     $('section:last-of-type').css('margin-bottom', footerHeight +"px");
@@ -65,6 +65,18 @@ $(document).ready(function() {
 			sectionPadding();
 		});
 	}
+
+  $(".js-primary-nav").find("a").each(function(){
+    var target = $(this).attr("href").replace ("/", ""),
+        offset = $(target).offset().top - $('#primary-header').outerHeight();
+
+    $(this).on("click", function(e){
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: offset
+      }, 2000);
+    });
+  });
 
 	// Focus on the form
 	$("a.contactLink").on("click", function() {
