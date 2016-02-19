@@ -35,13 +35,12 @@ bodyId: homepage
 
           {% for post in site.portfolio %}
           <div class="small-12 medium-6 large-4 columns thumb">
-            <div class="card center-block">
+            <a href="{{ post.url | prepend: site.baseurl }}"  class="card center-block">
               <div class="front face"><img alt="..." src="{{ site.baseurl }}/img/portfolio/thumbs/{{ post.thumb }}"></div>
               <div class="back face center">
                 <h3>{{ post.title }}</h3>
-                <p><a class="button radius" href="{{ post.url | prepend: site.baseurl }}">View</a></p>
               </div>
-            </div>
+            </a>
           </div>
           {% endfor %}
 

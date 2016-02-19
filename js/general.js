@@ -21,27 +21,29 @@ function setUpPortfolio (portfolioConfig) {
       $('img', this).removeClass('effect');
     });
 
-    // Make entire face clickable and open link in modal
-    if ($(this).find('a').length) {
+    // open link in modal
+    var linkURL = $(this).attr("href");
 
-      var linkURL = $(this).find("a").attr("href");
+    $(this).click(function(e) {
+      $.ajax({
+        url: linkURL,
+        type: 'GET',
+        success: function(data) {
+          $(portfolioConfig.modalItem).html($(data).filter('#main'));
+          $('<a class="close-reveal-modal">&#215;</a>').insertAfter(portfolioConfig.modalItem +' '+ portfolioConfig.pageFragment);
 
-      $(this).css({'cursor': 'pointer'}).click(function() {
-        $.ajax({
-          url: linkURL,
-          type: 'GET',
-          success: function(data) {
-            $(portfolioConfig.modalItem).html($(data).filter('#main'));
-            $('<a class="close-reveal-modal">&#215;</a>').insertAfter(portfolioConfig.modalItem +' '+ portfolioConfig.pageFragment);
-            $(portfolioConfig.modalItem).foundation('reveal', 'open');
-          },
-          error: function() {
-            alert('Sorry an error has occurred');
-          }
-        });
-        return false;
+        },
+        complete: function (data) {
+          $(portfolioConfig.modalItem).foundation('reveal', 'open');
+          $(".reveal-modal").css({"max-height" : window.innerHeight - 50 +"px", "overflow-y" : "auto"});
+        },
+        error: function() {
+          alert('Sorry an error has occurred');
+        }
       });
-    }
+      e.preventDefault();
+    });
+
   });
 }
 
@@ -84,5 +86,6 @@ $(document).ready(function() {
   // Remove HTML from modal on close
   $(document).on('close.fndtn.reveal', '[data-reveal]', function () {
     $("#modal-1 .fragment").empty();
+    $(".reveal-modal-bg").remove();
   });
 });
