@@ -5,12 +5,3 @@
 @import "portfolio";
 @import "footer";
 @import "icons";
-
-
-@media #{$small-only, $medium-only} {
-  .small-full-width {
-    padding-right: 0;
-    padding-left: 0;
-    width: 100%;
-  }
-}

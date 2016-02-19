@@ -13,9 +13,8 @@
         <img src="{{ site.baseurl }}/img/portfolio/{{ page.thumb }}" alt="{{ page.title }}" />
       </div>
 
-      <div class="small-12 medium-4 columns">
+      <div class="small-12 medium-4 columns portfolio-nav">
         <div class="clearfix">
-
           {% if page.previous %}
           <a class="button left tiny radius secondary" href="{{ site.baseurl }}/portfolio/{{ page.previous }}.html">Previous</a>
           {% endif %}
@@ -29,7 +28,6 @@
 
       </div>
     </div>
-
   </section>
 
   {% include footer.html %}
