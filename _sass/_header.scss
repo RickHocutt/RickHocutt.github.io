@@ -28,16 +28,16 @@
 }
 
 @media #{$large} {
-  #homepage #primary-header {
-    position: fixed;
-    top: 0;
-  }
+  /* #homepage #primary-header {
+  position: fixed;
+  top: 0;
+  } */
 }
 
 @media #{$small-only, $medium-only} {
   #primary-header {
     a {
-      display: block;
+      display: block; 
       margin-left: auto;
       margin-right: auto;
     }

@@ -2,6 +2,7 @@
   position: relative;
   margin: 0 auto;
   padding: 0;
+  border-bottom: 5px solid $primary-color;
 
   h1 {
     position: absolute;
@@ -20,8 +21,8 @@
   }
 
   .csstransitions #homepage #primary-footer {
-    position: fixed;
-    bottom: 0;
+    /* position: fixed;
+    bottom: 0;*/
     z-index: 10;
     background: #fff;
     width: 100%;
