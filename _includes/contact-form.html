@@ -1,11 +1,12 @@
-<form action="https://getsimpleform.com/messages?form_api_token=33abad4084159696f127432393dde67a" method="post">
+<!-- <form action="https://getsimpleform.com/messages?form_api_token=33abad4084159696f127432393dde67a" method="post" id="contact-form"> -->
+<form action="foo.html" method="post" id="contact-form">
   <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
   <input type='hidden' name='redirect_to' value='http://rickhocutt.com/#contact' />
 
   <div class="row">
     <div class="large-12 columns">
       <label for="your-name">Your Name
-        <input type="text" name="your-name" id="your-name">
+        <input type="text" name="your-name" id="your-name" required>
       </label>
     </div>
   </div>
@@ -13,15 +14,21 @@
   <div class="row">
     <div class="large-12 columns">
       <label for="email">Your Email address
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" required>
       </label>
     </div>
+  </div>
+
+  <div class="show-for-sr">
+    <label for="human-check">Don't fill this out
+      <input type="text" name="human-check" id="human-check">
+    </label>
   </div>
 
   <div class="row">
     <div class="large-12 columns">
       <label for="message">Your Message
-        <textarea name="message" id="message "rows="8"></textarea>
+        <textarea name="message" id="message "rows="8" required></textarea>
       </label>
     </div>
   </div>
