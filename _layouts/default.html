@@ -11,15 +11,5 @@
 
   {% include footer.html %}
 
-  <script type="text/javascript">
-  var humanCheckField = $("#human-check"),
-      contactForm = $("#contact-form");
-
-  contactForm.submit(function(e){
-    if (humanCheckField.val()) {
-      e.preventDefault();
-    }
-  });
-  </script>
 </body>
 </html>
