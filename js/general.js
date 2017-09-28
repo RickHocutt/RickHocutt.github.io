@@ -24,6 +24,7 @@ $(".card").each(function() {
   var linkURL = $(this).attr("href");
 
   $(this).click(function(e) {
+    $("#modal-1").html("");
     $.ajax({
       url: linkURL,
       type: 'GET',
