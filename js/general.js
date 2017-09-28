@@ -9,43 +9,40 @@ ga('send', 'pageview');
 
 $(document).foundation();
 
-function setUpPortfolio (portfolioConfig) {
-  //Open modal from portfolio items
-  $(portfolioConfig.items).each(function() {
-    // Portfolio Page Sliding Title Overlay
-    $(this).hover(function() {
-      $(portfolioConfig.itemInfo, this).stop().animate({top:'0px'},{queue:false,duration:300});
-      $('img', this).addClass('effect');
-    }, function() {
-      $(portfolioConfig.itemInfo, this).stop().animate({top:'100%'},{queue:false,duration:300});
-      $('img', this).removeClass('effect');
-    });
-
-    // open link in modal
-    var linkURL = $(this).attr("href");
-
-    $(this).click(function(e) {
-      $.ajax({
-        url: linkURL,
-        type: 'GET',
-        success: function(data) {
-          $(portfolioConfig.modalItem).html($(data).filter('#main'));
-          $('<a class="close-reveal-modal">&#215;</a>').insertAfter(portfolioConfig.modalItem +' '+ portfolioConfig.pageFragment);
-
-        },
-        complete: function (data) {
-          $(portfolioConfig.modalItem).foundation('reveal', 'open');
-          $(".reveal-modal").css({"max-height" : window.innerHeight - 50 +"px", "overflow-y" : "auto"});
-        },
-        error: function() {
-          alert('Sorry an error has occurred');
-        }
-      });
-      e.preventDefault();
-    });
-
+//Open modal from portfolio items
+$(".card").each(function() {
+  // Portfolio Page Sliding Title Overlay
+  $(this).hover(function() {
+    $(".back", this).stop().animate({top:'0px'},{queue:false,duration:300});
+    $('img', this).addClass('effect');
+  }, function() {
+    $(".back", this).stop().animate({top:'100%'},{queue:false,duration:300});
+    $('img', this).removeClass('effect');
   });
-}
+
+  // open link in modal
+  var linkURL = $(this).attr("href");
+
+  $(this).click(function(e) {
+    $.ajax({
+      url: linkURL,
+      type: 'GET',
+      success: function(data) {
+        $("#modal-1").html($(data).filter('#main'));
+        $('<a class="close-reveal-modal">&#215;</a>').insertAfter("#modal-1 #main");
+      },
+      complete: function (data) {
+        $("#modal-1").foundation('reveal', 'open');
+        $(".reveal-modal").css({"max-height" : window.innerHeight - 50 +"px", "overflow-y" : "auto"});
+      },
+      error: function() {
+        alert('Sorry an error has occurred');
+      }
+    });
+    e.preventDefault();
+  });
+
+});
 
 $(document).ready(function() {
   $('#homepage a[href^="#"], #homepage a[href^="/#"]').on('click', function(e) {
@@ -63,15 +60,6 @@ $(document).ready(function() {
     if ($(this).hasClass("contactLink")){
       $("form #your-name").focus();
     }
-  });
-
-
-  // Configs
-  setUpPortfolio({
-    items: ".card",
-    itemInfo: ".back",
-    modalItem: "#modal-1",
-    pageFragment: "#main"
   });
 
   // Handle the Prev/Next links in modal

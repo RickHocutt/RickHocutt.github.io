@@ -12,50 +12,46 @@ bodyId: homepage
   <div class="container row">
     <div class="large-12 columns">
       <h2 class="articleTitle">About Me</h2>
-      <p>I am a Front End Web Developer with sixteen years of graphic design experience and six years of experience building websites that conform to
-        current web standards. I hand code valid <span class="has-tip radius" data-tooltip title="More Than Just a Few New Fancy Tags">HTML 5</span>,
-        <span class="has-tip radius" data-tooltip title="Modern CSS That Rocks!">CSS 3</span>, and
-        <span class="has-tip radius" data-tooltip title="Making things happen :)">JavaScript</span>.</p>
+      <p>I have twenty years of graphic design experience and I've spent the past ten years designing and building websites that conform to current web standards. I have a strong background in User Experience and User Interface Design and hand code valid HTML, CSS, and JavaScript.</p>
 
-        <p>I have worked as a Designer and Front End Web Developer for LEGOLAND, AutoZone, Cardinal Health and Aon.
-          My duties have included developing user flows and application interfaces for <a href="http://www.autozone.com">AutoZone.com</a>, <a href="http://www.autozone.com.br">AutoZone.com.br</a>, <a href="http://www.aon.com/upoint">UPoint</a> .
-          On my own time I enjoy building sites using Drupal, Wordpress, Jekyll, Grunt and a slew of other Front-End tools.</p>
-          <p>This site is hosted on GitHub, want to see the code? Check out the repo at: <a href="https://github.com/RickHocutt/RickHocutt.github.io">https://github.com/RickHocutt/RickHocutt.github.io</a>.</p>
-          <p class="centered"><a class="button radius" href="resume.html">View My Resume</a></p>
-        </div>
+      <p>My recent duties as a UX Designer for <a href="https://alight.com/">Alight Solutions</a>, <a href="http://www.autozone.com">Aon</a>, <a href="http://www.cardinalhealth.com/en/about-us/who-we-are/fuse-by-cardinal-health.html">Cardinal Health</a> and <a href="http://www.autozone.com">AutoZone</a> include determining user flows and creating wireframes, prototypes and design comps and converting them into production ready assets. On my own time I enjoy experimenting with different ways to build sites including Jekyll, Panini, Angular and WordPress.</p>
+
+      <p>This site is hosted on GitHub, want to see the code? Check out the repo at: <a href="https://github.com/RickHocutt/RickHocutt.github.io">https://github.com/RickHocutt/RickHocutt.github.io</a>.</p>
+      <p class="centered"><a class="button radius" href="resume.html">View My Resume</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio section pad content" id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="small-12 columns">
+        <h2>Portfolio</h2>
       </div>
-    </section>
 
-    <section class="portfolio section pad content" id="portfolio">
-      <div class="container">
-        <div class="row">
-          <div class="small-12 columns">
-            <h2>Portfolio</h2>
+      {% for post in site.portfolio %}
+      <div class="small-12 medium-6 large-4 columns thumb">
+        <a href="{{ post.url | prepend: site.baseurl }}"  class="card center-block">
+          <div class="front face"><img alt="..." src="{{ site.baseurl }}/img/portfolio/thumbs/{{ post.thumb }}"></div>
+          <div class="back face center">
+            <h3>{{ post.title }}</h3>
           </div>
-
-          {% for post in site.portfolio %}
-          <div class="small-12 medium-6 large-4 columns thumb">
-            <a href="{{ post.url | prepend: site.baseurl }}"  class="card center-block">
-              <div class="front face"><img alt="..." src="{{ site.baseurl }}/img/portfolio/thumbs/{{ post.thumb }}"></div>
-              <div class="back face center">
-                <h3>{{ post.title }}</h3>
-              </div>
-            </a>
-          </div>
-          {% endfor %}
-
-          {% if dontShowThisYet %}
-          <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-          {% endif %}
-        </div>
+        </a>
       </div>
-    </section>
+      {% endfor %}
 
-    <section class="section pad content" id="contact">
-      <div class="container row">
-        <div class="large-12 columns" id="contact-form">
-          {% include contact-form.html %}
-        </div>
-      </div>
-    </section>
-    <div class="reveal-modal xlarge" data-reveal="" id="modal-1"></div>
+      {% if dontShowThisYet %}
+      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="section pad content" id="contact">
+  <div class="container row">
+    <div class="large-12 columns" id="contact-form">
+      {% include contact-form.html %}
+    </div>
+  </div>
+</section>
+<div class="reveal-modal xlarge" data-reveal="" id="modal-1"></div>
