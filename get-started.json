@@ -1,0 +1,577 @@
+{
+  "wizardQuestions": [
+    {
+      "id": "step-1",
+      "question": "Is the swimmer (or aspiring swimmer) a child or adult?",
+      "answers": [
+        {
+          "label": "Child",
+          "id": "childStep-1"
+        },
+        {
+          "label": "Adult",
+          "id": "adultStep-1"
+        }
+      ]
+    },
+    {
+      "id": "childStep-1",
+      "question": "What is the swimmer's skill level?",
+      "prev": "step-1",
+      "answers": [
+        {
+          "label": "Beginner",
+          "id": "childBeginner"
+        },
+        {
+          "label": "Intermediate/Advanced",
+          "id": "childIntermediate"
+        }
+      ]
+    },
+    {
+      "id": "adultStep-1",
+      "question": "What is the swimmer's skill level?",
+      "prev": "step-1",
+      "answers": [
+        {
+          "label": "Beginner",
+          "id": "adultBeginner"
+        },
+        {
+          "label": "Intermediate/Advanced",
+          "id": "adultIntermediate"
+        }
+      ]
+    },
+    {
+      "id": "childBeginner",
+      "question": "Does the swimmer feel comfortable in the water (face in water, kicking feet, holding breath, etc)?",
+      "prev": "childStep-1",
+      "answers": [
+        {
+          "label": "Yes",
+          "id": "childComfortable"
+        },
+        {
+          "label": "No",
+          "id": "childNotComfortable"
+        }
+      ]
+    },
+    {
+      "id": "childComfortable",
+      "question": "Pick the option that best fits the swimmer's goals.",
+      "prev": "childBeginner",
+      "answers": [
+        {
+          "label": "Swimming Basics",
+          "id": "childComfortableBasics"
+        },
+        {
+          "label": "Fitness",
+          "id": "childComfortableFitness"
+        },
+        {
+          "label": "Skill & Technique Building",
+          "id": "childComfortableSkills"
+        }
+      ]
+    },
+    {
+      "id": "childComfortableBasics",
+      "question": "Is the aspiring swimmer a child or preteen?",
+      "prev": "childBeginner",
+      "answers": [
+        {
+          "label": "Child",
+          "id": "childComfortableBasicsChildLocation"
+        },
+        {
+          "label": "Preteen",
+          "id": "childComfortableBasicsPreteen"
+        }
+      ]
+    },
+    {
+      "id": "childComfortableFitness",
+      "question": "Is the aspiring swimmer a child or preteen?",
+      "prev": "childComfortable",
+      "answers": [
+        {
+          "label": "Child",
+          "id": "childComfortableFitnessChild"
+        },
+        {
+          "label": "Preteen",
+          "id": "childComfortableFitnessPreteen"
+        }
+      ]
+    },
+    {
+      "id": "childComfortableSkills",
+      "question": "Is the aspiring swimmer a child or preteen?",
+      "prev": "childComfortable",
+      "answers": [
+        {
+          "label": "Child",
+          "id": "childComfortableSkillsChildLocation"
+        },
+        {
+          "label": "Preteen",
+          "id": "childComfortableSkillsPreteen"
+        }
+      ]
+    },
+    {
+      "id": "childComfortableSkillsChildLocation",
+      "question": "Where are you located?",
+      "prev": "childComfortableSkills",
+      "answers": [
+        {
+          "label": "North Charlotte",
+          "id": "childComfortableSkillsChildNorth"
+        },
+        {
+          "label": "South Charlotte",
+          "id": "childComfortableSkillsChildSouth"
+        }
+      ]
+    },
+    {
+      "id": "childNotComfortable",
+      "question": "Is the aspiring swimmer a child or preteen?",
+      "prev": "childBeginner",
+      "answers": [
+        {
+          "label": "Child",
+          "id": "childNotComfortableLocation"
+        },
+        {
+          "label": "Preteen",
+          "id": "childNotComfortablePreteen"
+        }
+      ]
+    },
+    {
+      "id": "childNotComfortableLocation",
+      "question": "Where are you located?",
+      "prev": "childNotComfortable",
+      "answers": [
+        {
+          "label": "North Charlotte Region",
+          "id": "childNotComfortableChildNorth"
+        },
+        {
+          "label": "South Charlotte Region",
+          "id": "childNotComfortableChildSouth"
+        }
+      ]
+    },
+    {
+      "id": "childIntermediate",
+      "question": "Pick the option that best fits the swimmer's goals.",
+      "prev": "childStep-1",
+      "answers": [
+        {
+          "label": "Continued Practice",
+          "id": "childIntermediatePractice"
+        },
+        {
+          "label": "Fitness",
+          "id": "childIntermediateFitness"
+        },
+        {
+          "label": "Skills & Techniques",
+          "id": "childIntermediateSkills"
+        },
+        {
+          "label": "Competition",
+          "id": "childIntermediateCompetition"
+        }
+      ]
+    },
+    {
+      "id": "childComfortableBasicsChildLocation",
+      "question": "Where are you located?",
+      "answers": [
+        {
+          "label": "North Charlotte",
+          "id": "childComfortableBasicsChildNorth"
+        },
+        {
+          "label": "South Charlotte",
+          "id": "childComfortableBasicsChildSouth"
+        }
+      ]
+    },
+    {
+      "id": "childComfortableBasicsChildNorth",
+      "results": [
+        {
+          "result": "MiniMAC North"
+        },
+        {
+          "result": "Preschool North"
+        },
+        {
+          "result": "Grade School North"
+        },
+        {
+          "result": "Homeschool"
+        }
+      ]
+    },
+    {
+      "id": "childComfortableBasicsChildSouth",
+      "results": [
+        {
+          "result": "Preschool South"
+        },
+        {
+          "result": "Grade School South"
+        },
+        {
+          "result": "Homeschool"
+        }
+      ]
+    },
+    {
+      "id": "childComfortableBasicsPreteenNorth",
+      "results": [
+        {
+          "result": "Grade School North"
+        },
+        {
+          "result": "Homeschool"
+        }
+      ]
+    },
+    {
+      "id": "childComfortableBasicsPreteenSouth",
+      "results": [
+        {
+          "result": "Grade School South"
+        },
+        {
+          "result": "Homeschool"
+        }
+      ]
+    },
+    {
+      "id": "childComfortableFitnessChild",
+      "results": [
+        {
+          "result": "JSL"
+        },
+        {
+          "result": "Homeschool"
+        }
+      ]
+    },
+    {
+      "id": "childComfortableFitnessPreteen",
+      "results": [
+        {
+          "result": "JSL"
+        },
+        {
+          "result": "Teen Fit"
+        }
+      ]
+    },
+    {
+      "id": "childComfortableSkillsChildNorth",
+      "results": [
+        {
+          "result": "Preschool North"
+        },
+        {
+          "result": "Grade School North"
+        },
+        {
+          "result": "Homeschool"
+        },
+        {
+          "result": "JSL"
+        },
+        {
+          "result": "Marlin"
+        }
+      ]
+    },
+    {
+      "id": "childComfortableSkillsChildSouth",
+      "results": [
+        {
+          "result": "Preschool South"
+        },
+        {
+          "result": "Grade School South"
+        },
+        {
+          "result": "Homeschool"
+        },
+        {
+          "result": "JSL"
+        },
+        {
+          "result": "Marlin"
+        }
+      ]
+    },
+    {
+      "id": "childComfortableSkillsPreteen",
+      "results": [
+        {
+          "result": "Grade School"
+        },
+        {
+          "result": "Homeschool"
+        },
+        {
+          "result": "JSL"
+        }
+      ]
+    },
+    {
+      "id": "childNotComfortableChildNorth",
+      "results": [
+        {
+          "result": "MiniMAC North"
+        },
+        {
+          "result": "Preschool North"
+        },
+        {
+          "result": "Grade School North"
+        },
+        {
+          "result": "Homeschool"
+        }
+      ]
+    },
+    {
+      "id": "childNotComfortableChildSouth",
+      "results": [
+        {
+          "result": "MiniMAC South"
+        },
+        {
+          "result": "Preschool South"
+        },
+        {
+          "result": "Grade School South"
+        },
+        {
+          "result": "Homeschool"
+        }
+      ]
+    },
+    {
+      "id": "childNotComfortablePreteen",
+      "results": [
+        {
+          "result": "Grade School"
+        },
+        {
+          "result": "Homeschool"
+        },
+        {
+          "result": "Teen Lessons"
+        }
+      ]
+    },
+    {
+      "id": "childIntermediatePractice",
+      "results": [
+        {
+          "result": "Competitive Team"
+        },
+        {
+          "result": "Homeschool"
+        }
+      ]
+    },
+    {
+      "id": "childIntermediateFitness",
+      "results": [
+        {
+          "result": "Teen Fit"
+        },
+        {
+          "result": "Homeschool"
+        }
+      ]
+    },
+    {
+      "id": "childIntermediateSkills",
+      "results": [
+        {
+          "result": "Competitive Team"
+        },
+        {
+          "result": "Swim School"
+        },
+        {
+          "result": "Homeschool"
+        }
+      ]
+    },
+    {
+      "id": "childIntermediateCompetition",
+      "results": [
+        {
+          "result": "Marlin"
+        },
+        {
+          "result": "Dolphin"
+        },
+        {
+          "result": "Shark"
+        },
+        {
+          "result": "Senior"
+        }
+      ]
+    },
+    {
+      "id": "adultBeginner",
+      "results": [
+        {
+          "result": "Adult Lessons"
+        },
+        {
+          "result": "Private Lessons"
+        }
+      ]
+    },
+    {
+      "id": "adultIntermediate",
+      "results": [
+        {
+          "result": "Masters"
+        },
+        {
+          "result": "Private Lessons"
+        }
+      ]
+    }
+  ],
+  "wizardAnswers": [
+    {
+      "label": "Competitive Team",
+      "url": "/compete/",
+      "description": "With a focus on lively competition, these highly regarded year-round program provide a team atmosphere to foster opportunity and stick to goals.",
+      "img": "compete.jpg"
+    },
+    {
+      "label": "Marlin",
+      "url": "/compete/marlin/",
+      "description": "“FUN”damentals – To teach SwimMAC athletes entering the sport of competitive swimming a great foundation of skill development & technique in a style that can be fun & fruitful for long-term growth in the sport of swimming.",
+      "img": "marlin.jpg"
+    },
+    {
+      "label": "Dolphin",
+      "url": "/compete/dolphin/",
+      "description": "Learn to Practice” – SwimMAC athletes will progress from the fundamental skills & technique taught in the Marlin Division and continue to build toward an advanced level of learning.",
+      "img": "dolphin.jpg"
+    },
+    {
+      "label": "Shark",
+      "url": "/compete/shark/",
+      "description": "\"Practice to Compete\" – Athletes are taught progressive skills & drills in a variety of ways to prepare them for the present and senior level. They will learn race strategies and build upon practice habits & skill development.",
+      "img": "shark.jpg"
+    },
+    {
+      "label": "Senior",
+      "url": "/compete/seniors/",
+      "description": "\"Compete to Excel\" – SwimMAC athletes continue to progress as well as take ownership to put it all together for the purpose of excelling toward their career goals.",
+      "img": "seniors.jpg"
+    },
+    {
+      "label": "MiniMAC North",
+      "url": "/swim-school/north/minimac/",
+      "description": "Skills include: blowing bubbles, breath holding, kicking feet, rowing arms, reaching for wall & 'crawling' along wall. Goal is to have parents out of the water by last class of most advanced session.",
+      "img": "minimac.jpg"
+    },
+    {
+      "label": "MiniMAC South",
+      "url": "/swim-school/south/minimac/",
+      "description": "Skills include: blowing bubbles, breath holding, kicking feet, rowing arms, reaching for wall & 'crawling' along wall. Goal is to have parents out of the water by last class of most advanced session.",
+      "img": "minimac.jpg"
+    },
+    {
+      "label": "PreSchool North",
+      "url": "/swim-school/north/preschool",
+      "description": "Here the budding swimmer will work toward moving up from parent & child to child only. They'll build a foundation, learn new skills, and continue to develop confidence in the water.",
+      "img": "preschool.jpg"
+    },
+    {
+      "label": "PreSchool South",
+      "url": "/swim-school/south/preschool",
+      "description": "Here the budding swimmer will work toward moving up from parent & child to child only. They'll build a foundation, learn new skills, and continue to develop confidence in the water.",
+      "img": "preschool.jpg"
+    },
+    {
+      "label": "Grade School North",
+      "url": "/swim-school/north/grade-school/",
+      "description": "These classes help children and preteens work toward building a foundation, learning new skills, and continuing to develop confidence in the water.",
+      "img": "grade-school.jpg"
+    },
+    {
+      "label": "Grade School South",
+      "url": "/swim-school/south/grade-school/",
+      "description": "These classes help children and preteens work toward building a foundation, learning new skills, and continuing to develop confidence in the water.",
+      "img": "grade-school.jpg"
+    },
+    {
+      "label": "Swim School",
+      "url": "/swim-school",
+      "description": "SwimMAC Swim School offers a variety of programs for students of all ages and levels of experience. Classes include MiniMAC, Preschool, Grade school, Adult and Private Lessons. In a small group or individual setting, SwimMAC Swim School instructors focus on fun methods to teach safety and proper technique. Our skill progression structure sets students up for success, and establishes a strong foundation while instilling a love of swimming in a positive and supportive environment.",
+      "img": "swim-school.jpg"
+    },
+    {
+      "label": "Homeschool",
+      "url": "/homeschool",
+      "description": "Structured with homeschool families in mind, we offer three different levels for ages 3–18 years taught simultaneously in the same pool during the school day. Convenient for families of multiple swimmers! Fulfills PE requirements.",
+      "img": "homeschool.jpg"
+    },
+    {
+      "label": "Masters",
+      "url": "/masters",
+      "description": "The SwimMAC Masters & Adult Fitness program welcomes people of any ability level. We have four basic categories of Masters swimmers: Adult-Learn-to Swim Program (ALTS) participants, Competitive Swimmers (Open Water & Swim Meets), Triathlon Swimmers, and Fitness Swimmers.",
+      "img": "masters.jpg"
+    },
+    {
+      "label": "Private Lessons",
+      "url": "/private-lessons/",
+      "description": "Private lessons cater to a swimmer's specific objectives with a customized training plan created by one of our qualified private lesson instructors.",
+      "img": "private-lessons.jpg"
+    },
+    {
+      "label": "Adult Lessons",
+      "url": "/adult-programs/adult-group-lessons/",
+      "description": "This is a beginner group lesson for adults 18 and over. Lessons will range from learning the basics of blowing bubbles and ﬂoating, to recreational swimming for fitness.",
+      "img": "pool-tiles.jpg"
+    },
+    {
+      "label": "JSL",
+      "url": "/jsl",
+      "description": "A technique-based program for all four strokes. Increase strength and endurance through drills and kicking. Provides an intro to racing skills such as dives and turns. Get a good workout in a close team setting. Tryouts required.",
+      "img": "jsl.jpg"
+    },
+    {
+      "label": "Teen Fit",
+      "url": "/teen-fit",
+      "description": "Intended for teens and preteens looking for a great aerobic and skill base program that creates a nurturing competitive environment. A great way to stay active and get stronger! Prepare for a swim team, improve technique, or cross train for other sports.",
+      "img": "teen-fit.jpg"
+    },
+    {
+      "label": "Teen Lessons",
+      "url": "/swim-school/north/teen-lessons/",
+      "description": "Intended for teens and preteens looking for a great aerobic and skill base program that creates a nurturing competitive environment. A great way to stay active and get stronger! Prepare for a swim team, improve technique, or cross train for other sports.",
+      "img": "pool-tiles/jpg"
+    }
+  ]
+}
